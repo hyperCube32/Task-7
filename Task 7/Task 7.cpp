@@ -1,7 +1,7 @@
 ﻿#include <iostream>
 #include <string>
 #include <fstream>
-#include <Windows.h>
+
 
 
 
@@ -92,7 +92,7 @@ void IO()
     else
     {
         cout << "Файл открыт" << endl;
-        string s, line;
+        string line;
         int mlComentFlag = 0;
         while (!fin.eof())
         {
@@ -103,16 +103,9 @@ void IO()
             delMultiLine(line, mlComentFlag);
 
             line += '\n';
-            s += line;
             cout << line;
             line = ' ';
         }
-        /*
-        ofstream out;
-        out.open("Comment1.txt");
-        out << s;
-        out.close();
-        */
     }
     fin.close();
 }
